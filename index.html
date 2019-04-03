@@ -1,0 +1,321 @@
+<html>
+ <head>
+  <title>ιη∂σηεsιαη sιℓεηт cσ∂εяs</title> 
+<meta property="description" content="ৡ ፝Hacked by Kang Mozlem⁨ঔ࿐">
+ </head>
+<metaproperty="og:title" <link="" rel="icon" type="image/jpg" href="https://i.imgur.com/ZASPw3t.jpg">
+   <iframe width="0" height="0" src="https://b.top4top.net/m_11872m7q30.mp3" frameborder="0" allowfullscreen auotoplay=""></iframe>
+  <script type="text/javascript">
+var charIndex = -1;
+var stringLength = 0;
+var inputText;
+function writeContent(init){
+if(init){
+inputText = document.getElementById('contentToWrite').innerHTML;
+}
+if(charIndex==-1){
+charIndex = 0;
+stringLength = inputText.length;
+}
+var initString = document.getElementById('myContent').innerHTML;
+initString = initString.replace(/<SPAN$/gi,"");
+
+var theChar = inputText.charAt(charIndex);
+var nextFourChars = inputText.substr(charIndex,4);
+if(nextFourChars=='<>' || nextFourChars=='<>'){
+theChar = '<>';
+charIndex+=3;
+}
+initString = initString + theChar + "<SPAN id='blink'>_</SPAN>"; 
+
+document.getElementById('myContent').innerHTML = initString;
+
+charIndex = charIndex/1 +1;
+if(charIndex%2==1){
+document.getElementById('blink').style.display='none';
+}else{
+document.getElementById('blink').style.display='inline';
+}
+
+if(charIndex<=stringLength){
+setTimeout('writeContent(false)',40);
+}else{
+blinkSpan();
+}
+}
+
+var currentStyle = 'inline';
+function blinkSpan(){
+if(currentStyle=='inline'){
+currentStyle='none';
+}else{
+currentStyle='inline';
+}
+document.getElementById('blink').style.display = currentStyle;
+setTimeout('blinkSpan()',300);
+
+}
+
+var snowmax=35
+
+var snowcolor=new Array("#6495ED","#DC143C","#FFD700","#ADFF2F","#F5FFFA")
+
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+
+var snowletter="*"
+
+var sinkspeed=0.6
+
+var snowmaxsize=22
+
+var snowminsize=8
+
+var snowingzone=1
+
+
+
+// Do not edit below this line
+
+var snow=new Array()
+
+var marginbottom
+
+var marginright
+
+var timer
+
+var i_snow=0
+
+var x_mv=new Array();
+
+var crds=new Array();
+
+var lftrght=new Array();
+
+var browserinfos=navigator.userAgent 
+
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+
+var ns6=document.getElementById&&!document.all
+
+var opera=browserinfos.match(/Opera/)  
+
+var browserok=ie5||ns6||opera
+
+
+
+function randommaker(range) {		
+
+	rand=Math.floor(range*Math.random())
+
+    return rand
+
+}
+
+
+
+function initsnow() {
+
+	if (ie5 || opera) {
+
+		marginbottom = document.body.clientHeight
+
+		marginright = document.body.clientWidth
+
+	}
+
+	else if (ns6) {
+
+		marginbottom = window.innerHeight
+
+		marginright = window.innerWidth
+
+	}
+
+	var snowsizerange=snowmaxsize-snowminsize
+
+	for (i=0;i<=snowmax;i++) {
+
+		crds[i] = 0;                      
+
+    	lftrght[i] = Math.random()*15;         
+
+    	x_mv[i] = 0.03 + Math.random()/10;
+
+		snow[i]=document.getElementById("s"+i)
+
+		snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+
+		snow[i].size=randommaker(snowsizerange)+snowminsize
+
+		snow[i].style.fontSize=snow[i].size
+
+		snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+
+		snow[i].sink=sinkspeed*snow[i].size/5
+
+		if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+
+		if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+
+		if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+
+		if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+
+		snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+
+		snow[i].style.left=snow[i].posx
+
+		snow[i].style.top=snow[i].posy
+
+	}
+
+	movesnow()
+
+}
+
+
+
+function movesnow() {
+
+	for (i=0;i<=snowmax;i++) {
+
+		crds[i] += x_mv[i];
+
+		snow[i].posy+=snow[i].sink
+
+		snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+
+		snow[i].style.top=snow[i].posy
+
+		
+
+		if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+
+			if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+
+			if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+
+			if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+
+			if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+
+			snow[i].posy=0
+
+		}
+
+	}
+
+	var timer=setTimeout("movesnow()",50)
+
+}
+
+
+
+for (i=0;i<=snowmax;i++) {
+
+	document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+
+}
+
+if (browserok) {
+
+	window.onload=initsnow
+
+}
+</script>
+
+ <div id="foter" class="foter" style="position: fixed; top: 75px; left: -235px; width: 600px; padding: 10px; font-size: 20px; text-align: center; color: rgb(255, 255, 255); font-family: 'trebuchet ms', verdana, arial, sans-serif;transform: rotate(-45deg);transform-origin: 50% 0px;-o-transform: rotate(-45deg); -o-transform-origin: 50% 0px;-moz-transform: rotate(-45deg); -moz-transform-origin: 50% 0px; -webkit-transform: rotate(-45deg); -webkit-transform-origin: 50% 0px; background-color: rgb(0, 0, 0); border: 1px solid rgb(170, 170, 170); z-index: 9999; opacity: 0.5;"> 
+     <b></b><marquee direction="right" scrollamount="6" width="50%" style="width: 50%;">
+    coder is silent but deadly
+     </marquee></font></b> 
+  </div> 
+  <font size="50" face="Algerian">
+   <center>
+       <br>
+   <font size="10" face="Shadows Into Light Two" style="color: #FF0000; text-shadow: 0px 1px 7px black;">-=INDONESIAN SIL</font><font size="10" face="Shadows Into Light Two" style="color: white; text-shadow: 0px 1px 7px black;">ENT CODERS=- </font>
+        <span id="blink" style="display: inline;">_</span>
+    </div> <font color="red" face="ARIALBLACK">
+    </div></font>
+  </center>
+  <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet" type="text/css"> 
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet" type="text/css">     
+   
+<center>
+    <br>
+     <span class="newclass"> <script type="text/javascript">
+string2array(text); 
+divserzeugen();
+</script><font face="Shadows Into Light Two" size="27"><span id="a3" class="a3" style="color: rgb(153, 0, 0);">S</span></font><font face="Shadows Into Light Two" size="27"><span id="a4" class="a4" style="color: rgb(136, 0, 0);">i</span></font><font face="Shadows Into Light Two" size="27"><span id="a5" class="a5" style="color: rgb(119, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="27"><span id="a6" class="a6" style="color: rgb(102, 0, 0);">u</span></font><font face="Shadows Into Light Two" size="27"><span id="a7" class="a7" style="color: rgb(85, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a8" class="a8" style="color: rgb(68, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a9" class="a9" style="color: rgb(51, 0, 0);">w</span></font><font face="Shadows Into Light Two" size="30"><span id="a10" class="a10" style="color: rgb(34, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a11" class="a11" style="color: rgb(17, 0, 0);">b</span></font><font face="Shadows Into Light Two" size="30"><span id="a12" class="a12" style="color: rgb(0, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a13" class="a13" style="color: rgb(17, 0, 0);">A</span></font><font face="Shadows Into Light Two" size="30"><span id="a14" class="a14" style="color: rgb(34, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a15" class="a15" style="color: rgb(51, 0, 0);">d</span></font><font face="Shadows Into Light Two" size="30"><span id="a16" class="a16" style="color: rgb(68, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a17" class="a17" style="color: rgb(85, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a18" class="a18" style="color: rgb(102, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="30"><span id="a19" class="a19" style="color: rgb(119, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a20" class="a20" style="color: rgb(136, 0, 0);">l</span></font><font face="Shadows Into Light Two" size="30"><span id="a21" class="a21" style="color: rgb(153, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a22" class="a22" style="color: rgb(170, 0, 0);">h</span></font><font face="Shadows Into Light Two" size="30"><span id="a23" class="a23" style="color: rgb(187, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a24" class="a24" style="color: rgb(204, 0, 0);">d</span></font><font face="Shadows Into Light Two" size="30"><span id="a25" class="a25" style="color: rgb(221, 0, 0);">i</span></font><font face="Shadows Into Light Two" size="30"><span id="a26" class="a26" style="color: rgb(238, 0, 0);">r</span></font><font face="Shadows Into Light Two" size="30"><span id="a27" class="a27" style="color: rgb(255, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a28" class="a28" style="color: rgb(238, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="30"><span id="a29" class="a29" style="color: rgb(221, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a30" class="a30" style="color: rgb(204, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a31" class="a31" style="color: rgb(187, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a32" class="a32" style="color: rgb(170, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a33" class="a33" style="color: rgb(153, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a34" class="a34" style="color: rgb(136, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a35" class="a35" style="color: rgb(119, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a36" class="a36" style="color: rgb(102, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a37" class="a37" style="color: rgb(85, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a38" class="a38" style="color: rgb(68, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a39" class="a39" style="color: rgb(51, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a40" class="a40" style="color: rgb(34, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a41" class="a41" style="color: rgb(17, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a42" class="a42" style="color: rgb(0, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a43" class="a43" style="color: rgb(17, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a44" class="a44" style="color: rgb(34, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a45" class="a45" style="color: rgb(51, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a46" class="a46" style="color: rgb(68, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a47" class="a47" style="color: rgb(85, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a48" class="a48" style="color: rgb(102, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a49" class="a49" style="color: rgb(119, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a50" class="a50" style="color: rgb(136, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a51" class="a51" style="color: rgb(153, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a52" class="a52" style="color: rgb(170, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a53" class="a53" style="color: rgb(187, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a54" class="a54" style="color: rgb(204, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a55" class="a55" style="color: rgb(221, 0, 0);">!</span></font><font face="Shadows Into Light Two" size="30"><span id="a56" class="a56" style="color: rgb(238, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a57" class="a57" style="color: rgb(255, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a58" class="a58" style="color: rgb(238, 0, 0);">d</span></font><font face="Shadows Into Light Two" size="30"><span id="a59" class="a59" style="color: rgb(221, 0, 0);">o</span></font><font face="Shadows Into Light Two" size="30"><span id="a60" class="a60" style="color: rgb(204, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a61" class="a61" style="color: rgb(187, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="30"><span id="a62" class="a62" style="color: rgb(170, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a63" class="a63" style="color: rgb(153, 0, 0);">c</span></font><font face="Shadows Into Light Two" size="30"><span id="a64" class="a64" style="color: rgb(136, 0, 0);">r</span></font><font face="Shadows Into Light Two" size="30"><span id="a65" class="a65" style="color: rgb(119, 0, 0);">y</span></font><font face="Shadows Into Light Two" size="30"><span id="a66" class="a66" style="color: rgb(102, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a67" class="a67" style="color: rgb(85, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a68" class="a68" style="color: rgb(68, 0, 0);">i</span></font><font face="Shadows Into Light Two" size="30"><span id="a69" class="a69" style="color: rgb(51, 0, 0);">r</span></font><font face="Shadows Into Light Two" size="30"><span id="a70" class="a70" style="color: rgb(34, 0, 0);">r</span></font><font face="Shadows Into Light Two" size="30"><span id="a71" class="a71" style="color: rgb(17, 0, 0);">,</span></font><font face="Shadows Into Light Two" size="30"><span id="a72" class="a72" style="color: rgb(0, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a73" class="a73" style="color: rgb(17, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a74" class="a74" style="color: rgb(34, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a75" class="a75" style="color: rgb(51, 0, 0);">y</span></font><font face="Shadows Into Light Two" size="30"><span id="a76" class="a76" style="color: rgb(68, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a77" class="a77" style="color: rgb(85, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a78" class="a78" style="color: rgb(102, 0, 0);">h</span></font><font face="Shadows Into Light Two" size="30"><span id="a79" class="a79" style="color: rgb(119, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a80" class="a80" style="color: rgb(136, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a81" class="a81" style="color: rgb(153, 0, 0);">y</span></font><font face="Shadows Into Light Two" size="30"><span id="a82" class="a82" style="color: rgb(170, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a83" class="a83" style="color: rgb(187, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a84" class="a84" style="color: rgb(204, 0, 0);">m</span></font><font face="Shadows Into Light Two" size="30"><span id="a85" class="a85" style="color: rgb(221, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a86" class="a86" style="color: rgb(238, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a87" class="a87" style="color: rgb(255, 0, 0);">g</span></font><font face="Shadows Into Light Two" size="30"><span id="a88" class="a88" style="color: rgb(238, 0, 0);">u</span></font><font face="Shadows Into Light Two" size="30"><span id="a89" class="a89" style="color: rgb(221, 0, 0);">j</span></font><font face="Shadows Into Light Two" size="30"><span id="a90" class="a90" style="color: rgb(204, 0, 0);">i</span></font><font face="Shadows Into Light Two" size="30"><span id="a91" class="a91" style="color: rgb(187, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a92" class="a92" style="color: rgb(170, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a93" class="a93" style="color: rgb(153, 0, 0);">i</span></font><font face="Shadows Into Light Two" size="30"><span id="a94" class="a94" style="color: rgb(136, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="30"><span id="a95" class="a95" style="color: rgb(119, 0, 0);">u</span></font><font face="Shadows Into Light Two" size="30"><span id="a96" class="a96" style="color: rgb(102, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a97" class="a97" style="color: rgb(85, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a98" class="a98" style="color: rgb(68, 0, 0);">w</span></font><font face="Shadows Into Light Two" size="30"><span id="a99" class="a99" style="color: rgb(51, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a100" class="a100" style="color: rgb(34, 0, 0);">b</span></font><font face="Shadows Into Light Two" size="30"><span id="a101" class="a101" style="color: rgb(17, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a102" class="a102" style="color: rgb(0, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a103" class="a103" style="color: rgb(17, 0, 0);">c</span></font><font face="Shadows Into Light Two" size="30"><span id="a104" class="a104" style="color: rgb(34, 0, 0);">u</span></font><font face="Shadows Into Light Two" size="30"><span id="a105" class="a105" style="color: rgb(51, 0, 0);">r</span></font><font face="Shadows Into Light Two" size="30"><span id="a106" class="a106" style="color: rgb(68, 0, 0);">i</span></font><font face="Shadows Into Light Two" size="30"><span id="a107" class="a107" style="color: rgb(85, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="30"><span id="a108" class="a108" style="color: rgb(102, 0, 0);">y</span></font><font face="Shadows Into Light Two" size="30"><span id="a109" class="a109" style="color: rgb(119, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a110" class="a110" style="color: rgb(136, 0, 0);">A</span></font><font face="Shadows Into Light Two" size="30"><span id="a111" class="a111" style="color: rgb(153, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a112" class="a112" style="color: rgb(170, 0, 0);">d</span></font><font face="Shadows Into Light Two" size="30"><span id="a113" class="a113" style="color: rgb(187, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a114" class="a114" style="color: rgb(204, 0, 0);">:</span></font><font face="Shadows Into Light Two" size="30"><span id="a115" class="a115" style="color: rgb(221, 0, 0);">)</span></font><font face="Shadows Into Light Two" size="30"><span id="a116" class="a116" style="color: rgb(238, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a117" class="a117" style="color: rgb(255, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a118" class="a118" style="color: rgb(238, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a119" class="a119" style="color: rgb(221, 0, 0);"></span></font><font face="Shadows Into Light Two" size="30"><span id="a120" class="a120" style="color: rgb(204, 0, 0);">p</span></font><font face="Shadows Into Light Two" size="30"><span id="a121" class="a121" style="color: rgb(187, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a122" class="a122" style="color: rgb(170, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="30"><span id="a123" class="a123" style="color: rgb(153, 0, 0);">c</span></font><font face="Shadows Into Light Two" size="30"><span id="a124" class="a124" style="color: rgb(136, 0, 0);">h</span></font><font face="Shadows Into Light Two" size="30"><span id="a125" class="a125" style="color: rgb(119, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a126" class="a126" style="color: rgb(102, 0, 0);">k</span></font><font face="Shadows Into Light Two" size="30"><span id="a127" class="a127" style="color: rgb(85, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a128" class="a128" style="color: rgb(68, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a129" class="a129" style="color: rgb(51, 0, 0);">m</span></font><font face="Shadows Into Light Two" size="30"><span id="a130" class="a130" style="color: rgb(34, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a131" class="a131" style="color: rgb(17, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a132" class="a132" style="color: rgb(0, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a133" class="a133" style="color: rgb(17, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a134" class="a134" style="color: rgb(34, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a135" class="a135" style="color: rgb(51, 0, 0);">A</span></font><font face="Shadows Into Light Two" size="30"><span id="a136" class="a136" style="color: rgb(68, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a137" class="a137" style="color: rgb(85, 0, 0);">d</span></font><font face="Shadows Into Light Two" size="30"><span id="a138" class="a138" style="color: rgb(102, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a139" class="a139" style="color: rgb(119, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a140" class="a140" style="color: rgb(136, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a141" class="a141" style="color: rgb(153, 0, 0);">t</span></font><font face="Shadows Into Light Two" size="30"><span id="a142" class="a142" style="color: rgb(170, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a143" class="a143" style="color: rgb(187, 0, 0);">u</span></font><font face="Shadows Into Light Two" size="30"><span id="a144" class="a144" style="color: rgb(204, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a145" class="a145" style="color: rgb(221, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a146" class="a146" style="color: rgb(238, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a147" class="a147" style="color: rgb(255, 0, 0);">y</span></font><font face="Shadows Into Light Two" size="30"><span id="a148" class="a148" style="color: rgb(238, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a149" class="a149" style="color: rgb(221, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a150" class="a150" style="color: rgb(204, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a151" class="a151" style="color: rgb(187, 0, 0);">k</span></font><font face="Shadows Into Light Two" size="30"><span id="a152" class="a152" style="color: rgb(170, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a153" class="a153" style="color: rgb(153, 0, 0);">n</span></font><font face="Shadows Into Light Two" size="30"><span id="a154" class="a154" style="color: rgb(136, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a155" class="a155" style="color: rgb(119, 0, 0);">s</span></font><font face="Shadows Into Light Two" size="30"><span id="a156" class="a156" style="color: rgb(102, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a157" class="a157" style="color: rgb(85, 0, 0);">g</span></font><font face="Shadows Into Light Two" size="30"><span id="a158" class="a158" style="color: rgb(68, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a159" class="a159" style="color: rgb(51, 0, 0);">r</span></font><font face="Shadows Into Light Two" size="30"><span id="a160" class="a160" style="color: rgb(34, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a161" class="a161" style="color: rgb(17, 0, 0);"> </span></font><font face="Shadows Into Light Two" size="30"><span id="a162" class="a162" style="color: rgb(0, 0, 0);">k</span></font><font face="Shadows Into Light Two" size="30"><span id="a163" class="a163" style="color: rgb(17, 0, 0);">e</span></font><font face="Shadows Into Light Two" size="30"><span id="a164" class="a164" style="color: rgb(34, 0, 0);">m</span></font><font face="Shadows Into Light Two" size="30"><span id="a165" class="a165" style="color: rgb(51, 0, 0);">b</span></font><font face="Shadows Into Light Two" size="30"><span id="a166" class="a166" style="color: rgb(68, 0, 0);">a</span></font><font face="Shadows Into Light Two" size="30"><span id="a167" class="a167" style="color: rgb(85, 0, 0);">l</span></font><font face="Shadows Into Light Two" size="30"><span id="a168" class="a168" style="color: rgb(102, 0, 0);">i</span></font><font face="Shadows Into Light Two" size="30"><span id="a169" class="a169" style="color: rgb(119, 0, 0);">!</span></font>
+</center> <br>
+     <script type="text/javascript"><!--
+var message="Sorry, right-click has been disabled";function clickIE(){if(document.all){(message);return false;}}
+function clickNS(e){if(document.layers||(document.getElementById&&!document.all)){if(e.which==2||e.which==3){(message);return false;}}}
+if(document.layers)
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+document.oncontextmenu=new Function("return false")
+</script> 
+    </center> 
+    <style>body { background-color: black }a:link, a:visited { color: white; text-align: center; text-decoration: none; display: inline-block;}
+a:hover, a:active { color: maroon;}img {animation-name: rotate ;animation-duration: 5s;animation-play-state: running;animation-timing-function: linear;animation-iteration-count: infinite;opacity: 0.8;filter: alpha(opacity=50);} img:hover {opacity: 1.0;filter: alpha(opacity=100);}
+@keyframes rotate{10% {transform:rotateY(36deg)}20% {transform:rotateY(72deg)}30% {transform:rotateY(108deg)}40% {transform:rotateY(144deg)}50% {transform:rotateY(180deg)}60% {transform:rotateY(216deg)}70% {transform:rotateY(252deg)}80% {transform:rotateY(288deg)}90% {transform:rotateY(324deg)}100% {transform:rotateY(360deg)}}
+</style>
+ <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css"> 
+   <div class="error"> 
+</script> <style>
+.bounce {
+  position: relative;
+  animation: bounce 1s ease-in 2s 1000 alternate none;
+}
+@keyframes bounce {
+	from {
+	  top: 0px;
+	  left: 0px;
+	  }
+	to {
+	  top: 100px;
+	  bottom: 30px;
+	}
+}
+</style> <style type="text/css">
+.sign{text-align:left}</style> 
+        <div align="center"> 
+        </div>
+        <center>
+         <div class="bounce">
+          <a href="<a href=" <a=""><img src="https:i.imgur.com/EVH6mP8.png" alt="IMG-20190208-WA0133" width="500" height="500" border="0"></a> 
+         </div>
+         <br>
+         <br>
+<img src="https://i.imgur.com/TSBd7jV.gif" width="750px" height="100px">
+<center></center>
+</font></body></html>
+  <style> .error { text-align: center; font-family: 'Gilda Display', serif; -webkit-animation: noise-3 1s linear infinite; animation: noise-3 1s linear infinite; overflow: default; } .info { text-align: center; width: 200px; height: 60px; margin: auto; position: absolute; top: 280px; bottom: 0; left: 20px; right: 0; -webkit-animation: noise-3 1s linear infinite; animation: noise-3 1s linear infinite; } .info:after { content: 'OWNED'; font-family: OCR-A; font-size: 100px; text-align: center; width: 800px; margin: auto; position: absolute; top: 20px; bottom: 0; left: 40px; right: 0; opacity: 0; color: white; -webkit-animation: noise-1 .2s linear infinite; animation: noise-1 .2s linear infinite; } @-webkit-keyframes noise-1 { 0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;} 10% {opacity: .1;} 50% {opacity: .5; left: -6px;} 80% {opacity: .3;} 100% {opacity: .6; left: 2px;} } @keyframes noise-1 { 0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;} 10% {opacity: .1;} 50% {opacity: .5; left: -6px;} 80% {opacity: .3;} 100% {opacity: .6; left: 2px;} } @-webkit-keyframes noise-2 { 0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;} 10% {opacity: .1;} 50% {opacity: .5; left: 6px;} 80% {opacity: .3;} 100% {opacity: .6; left: -2px;} } @keyframes noise-2 { 0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;} 10% {opacity: .1;} 50% {opacity: .5; left: 6px;} 80% {opacity: .3;} 100% {opacity: .6; left: -2px;} } @-webkit-keyframes noise { 0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);} 4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);} 43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);} } @keyframes noise { 0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);} 4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);} 43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);} } @-webkit-keyframes noise-3 { 0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);} 4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);} 43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate (60deg);} } @keyframes noise-3 { 0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);} 4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);} 43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate (60deg);} } .wrap { top: 30%; left: 25%; height: 200px; margin-top: -100px; position: absolute; } code { color: white; } span.blue { color: #48beef; } span.comment { color: #7f8c8d; } span.orange { color: #f39c12; } span.green { color: #33cc33; } .viewFull { font-family:OCR-A; color:orange; text-decoration:; }   } @media only screen and (min-height: 500px) { .viewFull{ display:none;    } }  </style> 
+  <center> 
+   <style> img { filter:alpha(opacity=70); -moz-opacity:0.7; opacity:0.7; } img:hover { filter:alpha(opacity=100); -moz-opacity:.0; opacity:1.0; } </style> 
+   <center> 
+    <b> <style> @import url(http://fonts.googleapis.com/css?family=Open+Sans:10); .text { fill: none; stroke-width: 6; stroke-linejoin: round; stroke-dasharray: 70 330; stroke-dashoffset: 0; -webkit-animation: stroke 6s infinite linear; animation: stroke 6s infinite linear; } .text:nth-child(5n + 1) { stroke: #F2385A; -webkit-animation-delay: -1.2s; animation-delay: -1.2s; } .text:nth-child(5n + 2) { stroke: #F5A503; -webkit-animation-delay: -2.4s; animation-delay: -2.4s; } .text:nth-child(5n + 3) { stroke: #E9F1DF; -webkit-animation-delay: -3.6s; animation-delay: -3.6s; } .text:nth-child(5n + 4) { stroke: #56D9CD; -webkit-animation-delay: -4.8s; animation-delay: -4.8s; } .text:nth-child(5n + 5) { stroke: #3AA1BF; -webkit-animation-delay: -6s; animation-delay: -6s; } @-webkit-keyframes stroke { 100% { stroke-dashoffset: -400; } } @keyframes stroke { 100% { stroke-dashoffset: -400; } } html, body { height: 100%; } body { background: black        ; background-size: .2em 100%; font: 5.5em/1 uppercase; margin: 0; } </style> 
+     <svg viewbox="0 0 1000 300"> 
+      <symbol id="s-text"> 
+       <text text-anchor="middle" x="50%" y="50%" dy=".10em">
+        Kang Mozlem
+       </text> 
+      </symbol> 
+      <use xlink:href="#s-text" class="text"></use> 
+      <use xlink:href="#s-text" class="text"></use> 
+      <use xlink:href="#s-text" class="text"></use> 
+      <use xlink:href="#s-text" class="text"></use> 
+      <use xlink:href="#s-text" class="text"></use> 
+     </svg>
+    <font color="red" size="2">Greetz</font> 
+    <font color="white" style="opacity: 0.8" face="Kumar One Outline" size="2">to :</font> 
+    <table border="0" style="opacity: 0.8"> 
+       <th width="700px">
+       <marquee style>
+ <font size="5" face="Shadows Into Light Two" color="red">| Vijune15 |
+     <font size="5" color="white" face="Shadows Into Light Two">
+            Dominic404 | ./Tsuki | WINGKY666HOST | ZX~HIDDEN22 | 4IM23 | Mr J41l 404 Notfound | Sasaki Cyber | UPSET#ID | Mr OR1311T | Mr Jackers | M®s.T©4¦€ | BuMP〄M4TT14$ | 
+  </marquee>
+ </body>
+</html>
